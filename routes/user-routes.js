@@ -5,10 +5,12 @@ const User    = require('../models/user-model');
 
 
 // post user info
-router.post('/user', (req, res, next)=>{
+router.post('/addUser', (req, res, next)=>{
   console.log("The body req is: ", req.body)
   User.create({
     username: req.body.username,
+    score: req.body.score,
+    completed: req.body.completed,
   })
   .then((response)=>{
     res.json({response})
@@ -22,7 +24,7 @@ router.post('/user', (req, res, next)=>{
 
 
 
-router.get('/getUser', (req, res, next)=>{
+router.get('/users', (req, res, next)=>{
 
 
 })

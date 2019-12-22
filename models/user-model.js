@@ -5,6 +5,8 @@ const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
     username: String,
+    score: Number,
+    completed: Number,
 })
 
 const User = mongoose.model("User", userSchema)
