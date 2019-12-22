@@ -11,6 +11,7 @@ router.post('/addUser', (req, res, next)=>{
     username: req.body.username,
     score: req.body.score,
     completed: req.body.completed,
+    avatar: req.body.avatar
   })
   .then((response)=>{
     res.json({response})
