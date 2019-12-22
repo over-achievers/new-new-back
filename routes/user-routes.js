@@ -26,7 +26,11 @@ router.post('/addUser', (req, res, next)=>{
 
 router.get('/users', (req, res, next)=>{
 
-
+  User.find()
+  .then((allUsers)=>{
+    res.json({allUsers: allUsers});
+  })
+  .catch((err)=>next(err))
 })
 
 
